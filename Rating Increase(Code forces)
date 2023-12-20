@@ -1,0 +1,26 @@
+import java.io.*;
+import java.util.*;
+import java.lang.*;
+public class Main {
+    public static void find(String str) {
+        for(int i =1;i<str.length();i++) {
+                String sa = str.substring(0,i);
+                String sb = str.substring(i);
+                int a = Integer.parseInt(sa);
+                int b = Integer.parseInt(sb);
+                if(b>a && sa.charAt(0)!='0' && sb.charAt(0)!= '0') {
+                    System.out.println(a+" "+b);
+                    return;
+                }
+            }
+            System.out.println(-1);
+        }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+        while(t-->0) {
+            String str = sc.next();
+            find(str);
+        }
+    }
+    }
